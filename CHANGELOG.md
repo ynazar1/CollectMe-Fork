@@ -1,3 +1,9 @@
+## 2.14
+* Updated TOC for Patch 12.0
+* Added icon and category to toc
+* Fixed problems with options
+* Updated included Libs to current versions
+
 ## 2.13
 * Updated TOC for Patch 11.0
 * Fixed addon API issues (TWW)

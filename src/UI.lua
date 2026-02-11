@@ -70,7 +70,7 @@ function CollectMe.UI:Build()
     local profilebutton = self:CreateButton(self.L["Options"], f.frame)
     profilebutton:SetScript("OnClick", function()
         if Settings and Settings.OpenToCategory then
-            Settings.OpenToCategory(CollectMe.ADDON_NAME)
+            Settings.OpenToCategory(LibStub("AceConfigDialog-3.0").BlizOptionsIDMap[CollectMe.ADDON_NAME])
         else
             InterfaceOptionsFrame_OpenToCategory(CollectMe.ADDON_NAME) 
             InterfaceOptionsFrame_OpenToCategory(CollectMe.ADDON_NAME) 

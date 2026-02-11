@@ -848,7 +848,7 @@ function CollectMe:SlashProcessor(input)
         self.Macro:Title()
     elseif input == "options" then
         if Settings and Settings.OpenToCategory then
-            Settings.OpenToCategory(addon_name)
+            Settings.OpenToCategory(LibStub("AceConfigDialog-3.0").BlizOptionsIDMap[addon_name])
         else
             InterfaceOptionsFrame_OpenToCategory(addon_name)
             InterfaceOptionsFrame_OpenToCategory(addon_name)
