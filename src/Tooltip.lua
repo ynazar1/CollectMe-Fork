@@ -11,6 +11,10 @@ function CollectMe.Tooltip:TooltipHook(tooltip)
     if self.gametooltip_visible == true or CollectMe.db.profile.tooltip.companions.hide == true then
         return
     end
+    -- UnitIsWildBattlePet/UnitGUID reject secret values during combat; return early to avoid errors
+    if InCombatLockdown() then
+        return
+    end
 
     self.gametooltip_visible = true
     if (tooltip and tooltip.GetUnit) then
